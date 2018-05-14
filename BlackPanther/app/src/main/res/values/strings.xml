@@ -1,3 +1,31 @@
 <resources>
-    <string name="app_name">BlackPanther</string>
+
+    <string name="app_name">Black Panther Quiz</string>
+
+    <string name="welcome">Welcome</string>
+    <string name="intro">Test your Black Panther knowledge with a quiz!</string>
+    <string name="scroll_down">Scroll down to start</string>
+    <string name="startButton">Start</string>
+
+    <string name="first_question">In what comic book did The Black Panther first appear?</string>
+    <string name="first_question_a">Jungle Action #23</string>
+    <string name="first_question_b">X-Men #100</string>
+    <string name="first_question_c">Black Panther #1</string>
+    <string name="first_question_d">Fantastic Four #32</string>
+
+    <string name="submit_button">SUBMIT</string>
+
+    <string name="second_question">Which of these teams have Black Panther as a member?</string>
+    <string name="second_question_a">Avengers</string>
+    <string name="second_question_b">Fantastic Four</string>
+    <string name="second_question_c">X-Men</string>
+    <string name="second_question_d">Illuminati</string>
+
+    <string name="third_question">How much money did Black Panther make on its opening weekend?</string>
+    <string name="third_question_dollars">Millions of dollars</string>
+
+    <string name="fourth_question">What is T\'challa\'s sister name?</string>
+    <string name="fourth_question_hint">Tap to write</string>
+
+
 </resources>
