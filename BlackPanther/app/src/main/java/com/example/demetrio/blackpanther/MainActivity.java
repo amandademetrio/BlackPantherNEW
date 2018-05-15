@@ -25,6 +25,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    /**
+     * Final submission method: used to check all answers and calculate the total score
+     */
+
     public void finalSubmitButton(View view) {
 
         //Checking first answer
@@ -63,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         //Checking 4th question
         EditText pantherSisterView = (EditText) findViewById(R.id.blackpanthersister);
         String pantherSister = pantherSisterView.getText().toString();
-        boolean pantherSisterstatus = pantherSister.equals("Shuri");
+        boolean pantherSisterstatus = pantherSister.equalsIgnoreCase("Shuri");
 
         if (pantherSisterstatus) {
             score = score + 1;
@@ -78,15 +82,21 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    /*Counter methods for third question*/
+    /**
+     * These are the methods used in the counter for question 3
+     */
 
-    //3rd question counter: Method used to display quantity on 3rd question counter
+    /**
+     * Method used to display a quantity in the 3rd question counter
+     */
     private void displayQuantity(int number) {
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
         quantityTextView.setText("" + number);
     }
 
-    //3rd question counter: This method adds one million dollars. It stops when it reaches 210
+    /**
+     * Method used to add a million dollars in the 3rd question counter. It stops when it reaches 210
+     */
     public void increment(View view) {
 
         if (boxOfficeQuantity < 210) {
@@ -100,7 +110,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    //3rd question counter: This method removes one million dollars. It stops when it reaches 200
+    /**
+     * Method used to remove a million dollars in the 3rd question counter. It stops when it reaches 200
+     */
     public void decrement(View view) {
 
         if (boxOfficeQuantity > 200) {

@@ -6,7 +6,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#455A64"
+        android:background="@color/gray_background"
         android:orientation="vertical">
 
         <!--Initial screen of the quiz-->
@@ -29,7 +29,7 @@
                 android:layout_marginLeft="140dp"
                 android:layout_marginTop="9dp"
                 android:text="@string/welcome"
-                android:textColor="#FFFFFF"
+                android:textColor="@android:color/white"
                 android:textSize="50sp" />
 
             <TextView
@@ -40,7 +40,7 @@
                 android:gravity="center"
                 android:padding="10dp"
                 android:text="@string/intro"
-                android:textColor="#FFFFFF"
+                android:textColor="@android:color/white"
                 android:textSize="30sp" />
 
             <TextView
@@ -52,7 +52,7 @@
                 android:gravity="center"
                 android:padding="10dp"
                 android:text="@string/scroll_down"
-                android:textColor="#FFFFFF"
+                android:textColor="@android:color/white"
                 android:textSize="15sp" />
 
         </RelativeLayout>
@@ -76,7 +76,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:text="@string/first_question"
-                android:textColor="#CFD8DC"
+                android:textColor="@color/grayish_white"
                 android:textSize="35sp"
                 android:textStyle="bold" />
 
@@ -93,7 +93,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:text="@string/first_question_a"
-                    android:textColor="#CFD8DC"
+                    android:textColor="@color/grayish_white"
                     android:textSize="25sp" />
 
                 <RadioButton
@@ -102,7 +102,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:text="@string/first_question_b"
-                    android:textColor="#CFD8DC"
+                    android:textColor="@color/grayish_white"
                     android:textSize="25sp" />
 
                 <RadioButton
@@ -111,7 +111,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:text="@string/first_question_c"
-                    android:textColor="#CFD8DC"
+                    android:textColor="@color/grayish_white"
                     android:textSize="25sp" />
 
                 <!--Correct answer -->
@@ -123,7 +123,7 @@
                     android:layout_marginBottom="10dp"
                     android:layout_marginLeft="10dp"
                     android:text="@string/first_question_d"
-                    android:textColor="#CFD8DC"
+                    android:textColor="@color/grayish_white"
                     android:textSize="25sp" />
 
             </RadioGroup>
@@ -149,7 +149,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:text="@string/second_question"
-                android:textColor="#CFD8DC"
+                android:textColor="@color/grayish_white"
                 android:textSize="35sp"
                 android:textStyle="bold" />
 
@@ -167,7 +167,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
                     android:text="@string/second_question_a"
-                    android:textColor="#CFD8DC"
+                    android:textColor="@color/grayish_white"
                     android:textSize="25sp" />
 
                 <!-- Should be selected -->
@@ -178,7 +178,7 @@
                     android:layout_below="@id/avengers_checkbox"
                     android:layout_marginLeft="10dp"
                     android:text="@string/second_question_b"
-                    android:textColor="#CFD8DC"
+                    android:textColor="@color/grayish_white"
                     android:textSize="25sp" />
 
                 <CheckBox
@@ -188,7 +188,7 @@
                     android:layout_below="@id/fantastic_four_checkbox"
                     android:layout_marginLeft="10dp"
                     android:text="@string/second_question_c"
-                    android:textColor="#CFD8DC"
+                    android:textColor="@color/grayish_white"
                     android:textSize="25sp" />
 
                 <!-- Should be selected -->
@@ -200,7 +200,7 @@
                     android:layout_marginBottom="10dp"
                     android:layout_marginLeft="10dp"
                     android:text="@string/second_question_d"
-                    android:textColor="#CFD8DC"
+                    android:textColor="@color/grayish_white"
                     android:textSize="25sp" />
 
             </RelativeLayout>
@@ -227,7 +227,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:text="@string/third_question"
-                android:textColor="#CFD8DC"
+                android:textColor="@color/grayish_white"
                 android:textSize="35sp"
                 android:textStyle="bold" />
 
@@ -250,7 +250,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
                     android:text="205"
-                    android:textColor="#CFD8DC"
+                    android:textColor="@color/grayish_white"
                     android:textSize="40sp" />
 
                 <!-- Correct answer is 202 million -->
@@ -267,7 +267,7 @@
                     android:layout_marginBottom="10dp"
                     android:layout_marginLeft="10dp"
                     android:text="@string/third_question_dollars"
-                    android:textColor="#CFD8DC"
+                    android:textColor="@color/grayish_white"
                     android:textSize="18sp" />
 
             </LinearLayout>
@@ -294,7 +294,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:text="@string/fourth_question"
-                android:textColor="#CFD8DC"
+                android:textColor="@color/grayish_white"
                 android:textSize="35sp"
                 android:textStyle="bold" />
 
@@ -307,7 +307,7 @@
                 android:layout_margin="20dp"
                 android:hint="@string/fourth_question_hint"
                 android:inputType="text"
-                android:textColor="#CFD8DC"
+                android:textColor="@color/grayish_white"
                 android:textColorHint="#CFD8DC" />
 
             <!--This is the final Submit button and should get you your final score-->
