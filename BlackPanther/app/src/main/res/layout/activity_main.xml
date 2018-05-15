@@ -92,7 +92,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:onClick="radioQuestion"
                     android:text="@string/first_question_a"
                     android:textColor="#CFD8DC"
                     android:textSize="25sp" />
@@ -102,7 +101,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:onClick="radioQuestion"
                     android:text="@string/first_question_b"
                     android:textColor="#CFD8DC"
                     android:textSize="25sp" />
@@ -112,7 +110,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:onClick="radioQuestion"
                     android:text="@string/first_question_c"
                     android:textColor="#CFD8DC"
                     android:textSize="25sp" />
@@ -125,7 +122,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:layout_marginLeft="10dp"
-                    android:onClick="radioQuestion"
                     android:text="@string/first_question_d"
                     android:textColor="#CFD8DC"
                     android:textSize="25sp" />
@@ -207,14 +203,6 @@
                     android:textColor="#CFD8DC"
                     android:textSize="25sp" />
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentRight="true"
-                    android:onClick="checkingBoxes"
-                    android:text="@string/submit_button" />
-
             </RelativeLayout>
 
 
@@ -284,15 +272,6 @@
 
             </LinearLayout>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:onClick="checkingBoxOffice"
-                android:text="@string/submit_button"
-                android:layout_marginBottom="15dp"/>
-
-
         </LinearLayout>
 
         <!-- Fourth question of quiz -->
@@ -331,14 +310,19 @@
                 android:textColor="#CFD8DC"
                 android:textColorHint="#CFD8DC" />
 
+            <!--This is the final Submit button and should get you your final score-->
+
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:onClick="isNameRight"
+                android:onClick="finalSubmitButton"
                 android:text="@string/submit_button"
                 android:layout_marginBottom="15dp"/>
+
+
+            <!--All images used in this app are not mine; just Reproduced from the web-->
 
         </LinearLayout>
 

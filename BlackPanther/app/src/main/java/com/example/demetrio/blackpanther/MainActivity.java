@@ -1,6 +1,7 @@
 package com.example.demetrio.blackpanther;
 
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CheckBox;
@@ -12,7 +13,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    //User's score for the quiz
+    //Initialing user's score for the quiz
     int score = 0;
     //Starting quantity on counter for 3rd question
     int boxOfficeQuantity = 205;
@@ -24,72 +25,72 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    public void finalSubmitButton(View view) {
 
-    /*Checks Radio Buttons answers and gives user toast message with current score*/
-    public void radioQuestion(View view) {
-        switch (view.getId()) {
-            case R.id.answerA:
-                if (true)
-                    score = 0;
-                Toast.makeText(this, "Your current score is " + score, Toast.LENGTH_SHORT).show();
-                break;
+        //Checking first answer
 
-            case R.id.answerB:
-                if (true)
-                    score = 0;
-                Toast.makeText(this, "Your current score is " + score, Toast.LENGTH_SHORT).show();
-                break;
+        RadioButton answerD = (RadioButton) findViewById(R.id.answerD);
 
-            case R.id.answerC:
-                if (true)
-                    score = 0;
-                Toast.makeText(this, "Your current score is " + score, Toast.LENGTH_SHORT).show();
-                break;
-
-            case R.id.answerD:
-                if (true)
-                    score = score + 1;
-                Toast.makeText(this, "Yay! You got it! Your current score is " + score, Toast.LENGTH_SHORT).show();
-                break;
-
+        if (answerD.isChecked()) {
+            score = score + 1;
         }
-    }
 
-    //Triggered when people click on the Submit button after selecting the boxes
-    public void checkingBoxes(View view) {
+        //Checking second answer
         //Getting checkbox views
         CheckBox avengersCheckbox = (CheckBox) findViewById(R.id.avengers_checkbox);
         CheckBox fantasticFourCheckbox = (CheckBox) findViewById(R.id.fantastic_four_checkbox);
         CheckBox illuminatiCheckbox = (CheckBox) findViewById(R.id.illuminati_checkbox);
+        CheckBox xMenCheckBox = (CheckBox) findViewById(R.id.x_men_checkbox);
 
         //Creating a boolean with the status of the checkbox
         boolean avengers = avengersCheckbox.isChecked();
         boolean fantasticFour = fantasticFourCheckbox.isChecked();
         boolean illuminati = illuminatiCheckbox.isChecked();
+        boolean xmen = xMenCheckBox.isChecked();
 
-        if (avengers && fantasticFour && illuminati) {
+        if (xmen) {
+            //Leaving this empty to act as a "break" and get out of the if statement
+        }
+        else if (avengers && fantasticFour && illuminati) {
             score = score + 1;
-            Toast.makeText(this, "You got it! Your new score is " + score, Toast.LENGTH_SHORT).show();
+        }
+
+        //Checking third question
+        if (boxOfficeQuantity == 202) {
+            score = score + 1;
+        }
+
+        //Checking 4th question
+        EditText pantherSisterView = (EditText) findViewById(R.id.blackpanthersister);
+        String pantherSister = pantherSisterView.getText().toString();
+        boolean pantherSisterstatus = pantherSister.equals("Shuri");
+
+        if (pantherSisterstatus) {
+            score = score + 1;
+            Toast.makeText(this, "Your final score is " + score, Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(this, "Your current score is still " + score, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Your final score is " + score, Toast.LENGTH_SHORT).show();
 
         }
+
+        //Reseting score to zero after user was informed of their score
+        score = 0;
 
     }
 
     /*Counter methods for third question*/
 
-    //Third question counter: Method used to display quantity on 3rd question counter
+    //3rd question counter: Method used to display quantity on 3rd question counter
     private void displayQuantity(int number) {
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
         quantityTextView.setText("" + number);
     }
 
-    //Third question counter: This method adds one million dollars. It stops when it reaches 210
+    //3rd question counter: This method adds one million dollars. It stops when it reaches 210
     public void increment(View view) {
-        boxOfficeQuantity = boxOfficeQuantity + 1;
 
-        if (boxOfficeQuantity <= 210) {
+        if (boxOfficeQuantity < 210) {
+            boxOfficeQuantity = boxOfficeQuantity + 1;
             displayQuantity(boxOfficeQuantity);
 
         } else {
@@ -99,43 +100,16 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    //Third question counter: This method removes one million dollars. It stops when it reaches 200
+    //3rd question counter: This method removes one million dollars. It stops when it reaches 200
     public void decrement(View view) {
-        boxOfficeQuantity = boxOfficeQuantity - 1;
 
-        if (boxOfficeQuantity >= 200) {
+        if (boxOfficeQuantity > 200) {
+            boxOfficeQuantity = boxOfficeQuantity - 1;
             displayQuantity(boxOfficeQuantity);
         } else {
             Toast toast = Toast.makeText(this, "Tip: It's more than 200 million!", Toast.LENGTH_SHORT);
             toast.show();
         }
-    }
-
-    //Checks boxOfficeQuantity number against the correct one and gives out updated score
-    public void checkingBoxOffice(View view) {
-        if (boxOfficeQuantity == 202) {
-            score = score + 1;
-            Toast.makeText(this, "You got it again! Your new score is " + score, Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(this, "Your current score is still " + score, Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    //Checks if sister name is correct and returns final answer
-    public void isNameRight(View view) {
-
-        EditText pantherSisterView = (EditText) findViewById(R.id.blackpanthersister);
-        String pantherSister = pantherSisterView.getText().toString();
-        boolean pantherSisterstatus = pantherSister.equals("Shuri");
-
-        if (pantherSisterstatus) {
-            score = score + 1;
-            Toast.makeText(this, "Victory is sweet! Your final score is " + score, Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(this, "You missed this last one, but don't worry! Your final score is " + score, Toast.LENGTH_SHORT).show();
-
-        }
-
     }
 
 }
